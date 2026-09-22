@@ -1,0 +1,29 @@
+{
+  "name": "obsidian-readest-web-highlights",
+  "version": "0.4.0",
+  "private": true,
+  "description": "Import Readest web highlights and covers into editable Obsidian notes",
+  "author": "wavey",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keptan/obsidian-readest.git"
+  },
+  "bugs": {
+    "url": "https://github.com/keptan/obsidian-readest/issues"
+  },
+  "homepage": "https://github.com/keptan/obsidian-readest#readme",
+  "main": "main.js",
+  "scripts": {
+    "build": "tsc --noEmit && node esbuild.config.mjs production",
+    "dev": "node esbuild.config.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "builtin-modules": "^4.0.0",
+    "esbuild": "^0.25.9",
+    "obsidian": "^1.13.1",
+    "typescript": "^5.9.2"
+  }
+}

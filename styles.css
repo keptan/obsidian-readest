@@ -1,0 +1,47 @@
+.readest-status {
+  cursor: pointer;
+  border-radius: var(--radius-s);
+  padding-inline: 6px;
+}
+
+.readest-status[data-state="syncing"] { color: var(--text-accent); }
+.readest-status[data-state="error"] { color: var(--text-error); }
+
+.callout[data-callout="readest-highlight"] {
+  --callout-color: 242, 190, 62;
+  --callout-icon: lucide-highlighter;
+  border: 0;
+  border-left: 3px solid rgb(var(--callout-color));
+  border-radius: 4px var(--radius-m) var(--radius-m) 4px;
+  background: color-mix(in srgb, rgb(var(--callout-color)) 11%, var(--background-primary));
+  box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+}
+
+.callout[data-callout="readest-highlight"] > .callout-title {
+  font-size: var(--font-ui-smaller);
+  font-weight: 600;
+  letter-spacing: .02em;
+  color: color-mix(in srgb, rgb(var(--callout-color)) 76%, var(--text-normal));
+}
+
+.callout[data-callout="readest-highlight"] > .callout-content {
+  font-family: var(--font-text);
+  font-size: 1.02em;
+  line-height: 1.65;
+}
+
+.callout[data-callout="readest-highlight"][data-callout-metadata="red"] { --callout-color: 231, 92, 92; }
+.callout[data-callout="readest-highlight"][data-callout-metadata="blue"] { --callout-color: 78, 145, 226; }
+.callout[data-callout="readest-highlight"][data-callout-metadata="green"] { --callout-color: 71, 166, 122; }
+.callout[data-callout="readest-highlight"][data-callout-metadata="purple"] { --callout-color: 154, 107, 212; }
+.callout[data-callout="readest-highlight"][data-callout-metadata="orange"] { --callout-color: 225, 137, 56; }
+
+.callout[data-callout="readest-note"] {
+  --callout-color: var(--interactive-accent-rgb);
+  --callout-icon: lucide-message-square-text;
+  margin-block: .75em .2em;
+  background: rgb(var(--callout-color) / 7%);
+  font-size: .94em;
+}
+
+.readest-settings h3 { margin-top: 2rem; }

@@ -1,0 +1,10 @@
+{
+  "id": "readest-highlights-web",
+  "name": "Readest Web Highlights",
+  "version": "0.4.0",
+  "minAppVersion": "1.13.1",
+  "description": "Import Readest web highlights and book covers into editable notes.",
+  "author": "wavey",
+  "authorUrl": "https://github.com/keptan",
+  "isDesktopOnly": false
+}
