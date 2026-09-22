@@ -74,7 +74,9 @@ export class LibraryWriter {
     const booksFolder = `${normalizePath(this.settings.booksFolder)}/`;
     for (const file of this.app.vault.getMarkdownFiles()) {
       const cache = this.app.metadataCache.getFileCache(file);
-      let bookHash = cache?.frontmatter?.readest_book_id;
+      const frontmatter: unknown = cache?.frontmatter;
+      let bookHash: unknown = frontmatter && typeof frontmatter === 'object' && 'readest_book_id' in frontmatter
+        ? frontmatter.readest_book_id : undefined;
       if (!bookHash && (!cache || file.path.startsWith(booksFolder))) {
         bookHash = splitDocument(await this.app.vault.cachedRead(file)).properties.readest_book_id;
       }

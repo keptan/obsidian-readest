@@ -1,6 +1,6 @@
 {
   "name": "obsidian-readest-web-highlights",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "private": true,
   "description": "Import Readest web highlights and covers into editable Obsidian notes",
   "author": "wavey",
@@ -21,7 +21,6 @@
   },
   "devDependencies": {
     "@types/node": "^24.0.0",
-    "builtin-modules": "^4.0.0",
     "esbuild": "^0.25.9",
     "obsidian": "^1.13.1",
     "typescript": "^5.9.2"

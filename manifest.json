@@ -1,7 +1,7 @@
 {
   "id": "readest-highlights-web",
   "name": "Readest Web Highlights",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "minAppVersion": "1.13.1",
   "description": "Import Readest web highlights and book covers into editable notes.",
   "author": "wavey",

@@ -173,7 +173,9 @@ function jwtRole(jwt: string): string | null {
   try {
     const payload = jwt.split('.')[1];
     if (!payload) return null;
-    return JSON.parse(atob(payload.replace(/-/g, '+').replace(/_/g, '/'))).role ?? null;
+    const decoded: unknown = JSON.parse(atob(payload.replace(/-/g, '+').replace(/_/g, '/')));
+    if (!decoded || typeof decoded !== 'object' || !('role' in decoded)) return null;
+    return typeof decoded.role === 'string' ? decoded.role : null;
   } catch {
     return null;
   }
